@@ -1,0 +1,2657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>画面イメージ</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+   <div class="leftsidebar">
+
+    <div class="sidebar">
+      <h3>出場メンバー</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>サーブ順</th>
+            <th>背番号</th>
+            <th>スターティング</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>11</td>
+            <td>池田</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>7</td>
+            <td>山田</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>5</td>
+            <td>多田</td>
+          </tr>
+　　　　　　<tr>
+            <td>4</td>
+            <td>1</td>
+            <td>太田</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>3</td>
+            <td>代田</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>2</td>
+            <td>田中</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>L</td>
+            <td>坂田</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="sidebar">
+      <h3>ベンチメンバー</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>背番号</th>
+            <th>選手名</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>9</td>
+            <td>選手A</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>選手B</td>
+          </tr>
+          <!-- 他の選手も同様に追加 -->
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="sidebar">
+      <h3>レセプション評価</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>評価</th>
+            <th>評価数</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>A</td>
+            <td>
+              <input type="button" class="plus">+</input>
+              <input type="button" class="minus">-</input>
+            </td>
+          </tr>
+          <tr>
+            <td>B</td>
+            <td>
+              <input type="button" class="plus">+</input>
+              <input type="button" class="minus">-</input>
+            </td>
+          </tr>
+          <tr>
+            <td>C</td>
+            <td>
+              <input type="button" class="plus">+</input>
+              <input type="button" class="minus">-</input>
+            </td>
+          </tr>
+          <tr>
+            <td>D</td>
+            <td>
+              <input type="button" class="plus">+</input>
+              <input type="button" class="minus">-</input>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="sidebar">
+      <h3>スパイク統計</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>番号</th>
+            <th>打数</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>11</td>
+            <td>
+              <input type="button" class="plus">+</input>
+              <input type="button" class="minus">-</input>
+            </td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td>
+              <input type="button" class="plus">+</input>
+              <input type="button" class="minus">-</input>
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>
+              <input type="button" class="plus">+</input>
+              <input type="button" class="minus">-</input>
+            </td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>
+              <input type="button" class="plus">+</input>
+              <input type="button" class="minus">-</input>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>
+              <input type="button" class="plus">+</input>
+              <input type="button" class="minus">-</input>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+   </div>
+
+<!-- メインバー -->
+  <div class="mainbar">
+   <table class="mainbartable">
+
+    <thead>
+      <tr>
+        <th class="serve" colspan="3">サーブ</th>
+        <th class="result" colspan="3">決定要因</th>
+        <th class="score" colspan="2">スコア</th>
+      </tr>
+      <tr>
+        <th width="60px">背番号</th>
+        <th width="100px">エース</th>
+        <th width="100px">ミス</th>
+        <th width="60px">背番号</th>
+        <th width="300px">得点</th>
+        <th width="300px">失点</th>
+        <th width="80px">自チーム</th>
+        <th width="80px">相手</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+
+<!-- 25個以上 -->
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+    <tbody>
+      <!-- 50行分のテーブルデータを追加 -->
+      <tr>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+	<div serveCheck>
+        <td><input type="checkbox" name="ace"></td>
+        <td><input type="checkbox" name="miss"></td>
+        </div>
+        <td>
+          <select>
+            　<option value="num"></option>
+            　<option value="num">1</option>
+  　          <option value="num">2</option>
+   　　　　    <option value="num">3</option>
+            　<option value="num">5</option>
+  　          <option value="num">7</option>
+   　　　　    <option value="num">11</option>
+          </select>
+        </td>
+        <td>
+          <select>
+            　<option value="spike">スパイク</option>
+  　          <option value="block">ブロック</option>
+   　　　　    <option value="attack">アタック</option>
+          </select>
+        </td>
+        <td>
+          <select>
+　　　　　　　　<option value="receive">レシーブ</option>
+             <option value="toss">トス</option>
+             <option value="spike">スパイク</option>
+             <option value="block">ブロック</option>
+          </select>
+        </td>
+        <td class="team-score"><!-- 自チームのスコア --></td>
+        <td class="opponent-score"><!-- 相手チームのスコア --></td>
+      </tr>
+    </tbody>
+
+  </table>
+ </div>
+
+  </div>
+</body>
+</html>

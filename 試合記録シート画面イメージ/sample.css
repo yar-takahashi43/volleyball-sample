@@ -1,0 +1,34 @@
+/* styles.css */
+
+/* テーブル全体のスタイル */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* ヘッダー行のスタイル */
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+/* ヘッダー行の背景色 */
+th {
+    background-color: #f2f2f2;
+}
+
+/* 列の幅を指定 */
+th:nth-child(1), td:nth-child(1) {
+    width: 4%;
+}
+
+th:nth-child(2), td:nth-child(2) {
+    width: 5%;
+}
+
+th:nth-child(3), td:nth-child(3) {
+    width: 5%;
+}
+
+/* 他の列も同様に指定 */
